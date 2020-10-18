@@ -2,8 +2,10 @@
 import 'package:firebase/screens/login_screen.dart';
 import 'package:flutter/screens/signup_screen.dart'; */
 import 'package:flutter/material.dart';
+import 'package:msafiri/screens/destinationdetails_screen.dart';
 import 'package:msafiri/screens/google_maps.dart';
 import 'package:msafiri/screens/home_screen.dart';
+import 'package:msafiri/screens/horizontal_list_item.dart';
 import 'package:msafiri/screens/signup_screen.dart';
 import 'package:msafiri/screens/login_screen.dart';
 import 'package:msafiri/screens/settings_screen.dart';
@@ -40,7 +42,9 @@ class MyApp extends StatelessWidget {
         SettingScreen.id: (context) => SettingScreen(),
         TravelScreen.id: (context) => TravelScreen(),
         HomeScreen.id: (context) => HomeScreen(),
-        MyHomePage.id: (context) => MyHomePage(),
+        DestinationDetailsScreen.id: (context) => DestinationDetailsScreen(),
+        // HorizontalListItem.id: (coontext) => HorizontalListItem(0),
+        //DestinationDetailsScreen.routeName:(context) => DestinationDetailsScreen(),
       },
     );
   }

@@ -7,10 +7,12 @@ import 'package:msafiri/screens/home_screen.dart';
 import 'package:msafiri/screens/homepage_screen.dart';
 //import 'package:powers/screens/destination_carouselone.dart';
 import 'package:msafiri/screens/hotel_carousel.dart';
-import 'package:msafiri/screens/places.dart';
 import 'package:msafiri/screens/settings_screen.dart';
 import 'package:msafiri/screens/sites.dart';
 import 'package:msafiri/services/auth_services.dart';
+
+import 'activities.dart';
+
 //import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class TravelScreen extends StatefulWidget {
@@ -129,35 +131,35 @@ class _TravelScreenState extends State<TravelScreen> {
             ),
           ),
         ),
-        body: SingleChildScrollView(
-          child: SafeArea(
-            child: ListView(
-              padding: EdgeInsets.symmetric(vertical: 30.0),
-              children: <Widget>[
-                Padding(
-                  padding: EdgeInsets.only(left: 20.0, right: 120.0),
-                  child: Text(
-                    'What would you like to find?',
-                    style: TextStyle(
-                      fontSize: 20.0,
-                      fontWeight: FontWeight.bold,
-                    ),
+        body: SafeArea(
+          child: ListView(
+            // physics:
+            //NeverScrollableScrollPhysics(), //allows the whole screen to be efficiently scrollable apart from one particular scre
+            padding: EdgeInsets.symmetric(vertical: 30.0),
+            children: <Widget>[
+              Padding(
+                padding: EdgeInsets.only(left: 20.0, right: 120.0),
+                child: Text(
+                  'What would you like to find?',
+                  style: TextStyle(
+                    fontSize: 20.0,
+                    fontWeight: FontWeight.bold,
                   ),
                 ),
+              ),
 
-                SizedBox(height: 20.0),
-                DestinationCarousel(),
-                SizedBox(height: 20.0),
-                // DestinationCarouselOne(),
-                HotelCarousel(),
-                SizedBox(height: 20.0),
-                Sites(),
-                SizedBox(height: 20.0),
-                Places(),
-                // SizedBox(), //importation of hotel_carousel
-                //  HomePageScreen(),
-              ],
-            ),
+              SizedBox(height: 20.0),
+              DestinationCarousel(),
+              SizedBox(height: 20.0),
+              // DestinationCarouselOne(),
+              //HotelCarousel(),
+              // SizedBox(height: 20.0),
+              Sites(),
+              SizedBox(height: 20.0),
+              Activities(),
+              // SizedBox(), //importation of hotel_carousel
+              //  HomePageScreen(),
+            ],
           ),
         ),
       ),
